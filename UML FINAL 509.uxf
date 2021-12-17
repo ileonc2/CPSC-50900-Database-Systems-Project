@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>60</y>
+      <w>270</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>CUSTOMER
+--
+CUST_POLICY_ID: INT(10)
+CUSTOMER_NAME: VARCHAR(25)
+CUSTOMER_DOB: DATE
+CUSTOMER_ADDRESS: VARCHAR(50)
+CUST_PAYMENT_TYPE: VARCHAR(16)
+--
+PK: CUST_POLICY_ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>20</y>
+      <w>230</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>PAYMENT
+--
+CUST_POLICY_ID: INT(10)
+PAYMENT_TYPE: VARCHAR(16)
+PAYMENT_ROUTNG: INT(10)
+PAYMENT_ACCOUNT:INT(10)
+PAY_CHECK_NUM:INT(5)
+--
+FK: CUST_POLICY_ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>330</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>POLICY
+--
+CUST_POLICY_ID: INT(10)
+POLICY_PLAN: INT(5)
+POLICY_PRICE: INT(5)
+--
+FK: CUST_POLICY_ID
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>490</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DRIVER
+--
+CUST_POLICY_ID: INT(10)
+POLICY_PLAN: INT(5)
+DRIVER_LICENSE: VARCHAR(12)
+DRIVER_HISTORY: CHAR(1)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>280</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>CLAIMS
+--
+CUST_POLICY_ID: INT(10)
+CLAIMS_ID: INT(10)
+CLAIMS_DATE: DATE
+CLAIMS_DOC_ID: INT(10)
+--
+FK: CUST_POLICY_ID
+PK: CLAIMS_ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>220</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>220</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>90</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>450</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>420</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>220</y>
+      <w>80</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
