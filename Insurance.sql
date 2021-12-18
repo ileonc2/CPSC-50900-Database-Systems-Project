@@ -1,7 +1,17 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2021-12-18 05:19:49.327
+--Database created using 'create database' command
+-- Command used because I had to manually enter the scripts into mariadb through virtual machine
 
--- tables
+-- tables: 'create table' command lets you create an entity in the database. By defining the attributes below along with 'create table'
+-- you are also creating attributes for the table
+
+--You can define the attribute after naming it by adding the datatype or any constraints such as NOT NULL which doesn't allow 
+-- a cell to be empty
+
+--You can assign the Primary key using  CONSTRAINT 'table_name'_pk PRIMARY KEY
+
+--The 'alter table' command lets you adjust mostly anything involving that specific table. In here we are using it to define foreign keys
+--by adding a constarint to the relationship between tables and identifying which attribute relates them.
+
 -- Table: CLAIMS
 CREATE TABLE CLAIMS (
     POLICY_ID int NOT NULL,
@@ -34,9 +44,9 @@ CREATE TABLE DRIVER (
 CREATE TABLE PAYMENT (
     POLICY_ID int NOT NULL,
     PAYMENT_TYPE varchar(16) NOT NULL,
-    PAYMENT_ROUTNG int NOT NULL,
-    PAYMENT_ACCOUNT int NOT NULL,
-    PAY_CHECK_NUM int NOT NULL,
+    PAYMENT_ROUTNG int,
+    PAYMENT_ACCOUNT int,
+    PAY_CHECK_NUM int,
     CONSTRAINT PAYMENT_pk PRIMARY KEY (PAYMENT_TYPE)
 );
 
